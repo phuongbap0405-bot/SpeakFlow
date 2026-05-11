@@ -11,7 +11,9 @@ import '../dto/whisper_response_dto.dart';
 /// `whisper-1` model. The [Dio] instance is expected to have the OpenAI
 /// base URL (`https://api.openai.com/v1`) and the `Authorization` header
 /// already configured via the DI container.
-@Injectable(as: SttService)
+// OpenAI Whisper STT — requires paid API key.
+// To use: remove @Injectable from GeminiSttService and re-enable this annotation.
+// @Injectable(as: SttService)
 class OpenAiSttService implements SttService {
   final Dio _dio;
 

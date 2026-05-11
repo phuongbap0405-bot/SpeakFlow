@@ -5,6 +5,9 @@ import 'core/di/injection.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await configureDependencies();
+
+  const environment = String.fromEnvironment('ENVIRONMENT', defaultValue: 'prod');
+  await configureDependencies(environment: environment);
+
   runApp(const SpeakFlowApp());
 }

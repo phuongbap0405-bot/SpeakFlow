@@ -18,7 +18,9 @@ import '../../domain/services/tts_service.dart';
 /// The [Dio] instance is expected to have the OpenAI base URL
 /// (`https://api.openai.com/v1`) and the `Authorization` header already
 /// configured via the DI container.
-@Injectable(as: TtsService)
+// OpenAI TTS — requires paid API key.
+// To use: remove @Injectable from FlutterTtsService and re-enable this annotation.
+// @Injectable(as: TtsService)
 class OpenAiTtsService implements TtsService {
   final Dio _dio;
   final AudioPlayer _player;

@@ -17,12 +17,18 @@ import 'package:speakflow/core/di/injection_module.dart' as _i1070;
 import 'package:speakflow/core/network/dio_client.dart' as _i510;
 import 'package:speakflow/features/conversation/data/services/audio_recorder_impl.dart'
     as _i327;
-import 'package:speakflow/features/conversation/data/services/open_ai_llm_service.dart'
-    as _i643;
-import 'package:speakflow/features/conversation/data/services/open_ai_stt_service.dart'
+import 'package:speakflow/features/conversation/data/services/flutter_tts_service.dart'
+    as _i324;
+import 'package:speakflow/features/conversation/data/services/gemini_llm_service.dart'
+    as _i141;
+import 'package:speakflow/features/conversation/data/services/gemini_stt_service.dart'
+    as _i502;
+import 'package:speakflow/features/conversation/data/services/mock_llm_service.dart'
     as _i1010;
-import 'package:speakflow/features/conversation/data/services/open_ai_tts_service.dart'
-    as _i646;
+import 'package:speakflow/features/conversation/data/services/mock_stt_service.dart'
+    as _i252;
+import 'package:speakflow/features/conversation/data/services/mock_tts_service.dart'
+    as _i259;
 import 'package:speakflow/features/conversation/domain/services/audio_recorder.dart'
     as _i58;
 import 'package:speakflow/features/conversation/domain/services/llm_service.dart'
@@ -65,6 +71,10 @@ import 'package:speakflow/features/topic_selection/presentation/bloc/topic_bloc.
     as _i683;
 import 'package:uuid/uuid.dart' as _i706;
 
+const String _dev = 'dev';
+const String _prod = 'prod';
+const String _mock = 'mock';
+
 extension GetItInjectableX on _i174.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
   Future<_i174.GetIt> init({
@@ -80,14 +90,33 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.singleton<_i706.Uuid>(() => appModule.uuid);
     gh.singleton<_i361.Dio>(() => networkModule.dio);
+    gh.factory<_i9.TtsService>(
+      () => _i324.FlutterTtsService(),
+      registerFor: {_dev, _prod},
+    );
     gh.factory<_i58.AudioRecorder>(() => _i327.AudioRecorderImpl());
-    gh.factory<_i373.LlmService>(() => _i643.OpenAiLlmService(gh<_i361.Dio>()));
+    gh.factory<_i505.SttService>(
+      () => _i252.MockSttService(),
+      registerFor: {_mock},
+    );
+    gh.factory<_i373.LlmService>(
+      () => _i141.GeminiLlmService(gh<_i361.Dio>()),
+      registerFor: {_dev, _prod},
+    );
     gh.factory<_i413.StartSessionUseCase>(
       () => _i413.StartSessionUseCase(gh<_i706.Uuid>()),
     );
-    gh.factory<_i9.TtsService>(() => _i646.OpenAiTtsService(gh<_i361.Dio>()));
     gh.factory<_i505.SttService>(
-      () => _i1010.OpenAiSttService(gh<_i361.Dio>()),
+      () => _i502.GeminiSttService(gh<_i361.Dio>()),
+      registerFor: {_dev, _prod},
+    );
+    gh.factory<_i373.LlmService>(
+      () => _i1010.MockLlmService(),
+      registerFor: {_mock},
+    );
+    gh.factory<_i9.TtsService>(
+      () => _i259.MockTtsService(),
+      registerFor: {_mock},
     );
     gh.factory<_i317.TranscribeAudioUseCase>(
       () => _i317.TranscribeAudioUseCase(gh<_i505.SttService>()),

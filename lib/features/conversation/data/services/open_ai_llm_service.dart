@@ -17,7 +17,9 @@ import '../dto/gpt_response_dto.dart';
 /// `/chat/completions` endpoint and parses the structured JSON reply into an
 /// [LlmResponse] containing the AI's conversational reply and any grammar
 /// corrections for the user's message.
-@Injectable(as: LlmService)
+// OpenAI GPT-4o LLM — requires paid API key.
+// To use: remove @Injectable from GeminiLlmService and re-enable this annotation.
+// @Injectable(as: LlmService)
 class OpenAiLlmService implements LlmService {
   const OpenAiLlmService(this._dio);
 

@@ -21,4 +21,5 @@ final GetIt getIt = GetIt.instance;
 /// automatically by the generated `$initGetIt` function, so the returned
 /// [Future] resolves only after every async dependency is ready.
 @InjectableInit()
-Future<void> configureDependencies() => getIt.init();
+Future<void> configureDependencies({String? environment}) =>
+    getIt.init(environment: environment);
