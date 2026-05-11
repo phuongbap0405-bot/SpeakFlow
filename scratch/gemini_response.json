@@ -1,0 +1,32 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\n  \"response\": \"Hello! I'm here to help you with your studies. Is there a specific subject or topic you'd like to dive into today?\"\n}",
+            "thoughtSignature": "EogICoUIAQw51sd1oQwJDdxHJcOTmf4N8LA9qwgDhmmUJhrpLVOz+PPqib+Kc5X1bsB8ZhNhKSMscPrWt0dexSDkBaKhgCKCPJpaeScLNC/XQlQ+kzqPS293mzoarVn3qZbkohwmWxesbCIVfJI7qF34hgX9vemwmVwMYkJE+ttF+EmojVIjKdk9VPsCZvou7iclr0Ur62vn/pxmfKMm8txVD5/XsrylPRx93cWdr101VEJUWpteJ5vL1VriVuT7LT3Y70wntAc4BhiLvQ4U9jTwiPFSX+J++4g1Twus57uPIV0vxOwhIhHqOyZz5n6oLFGqHo15gYise8Bz7xiBjbBonoZue1EFxUFGA+YJN8lKDWnZ9f8Sgvzzmv+/NcNp959IJKzjUae/oslsD8XcOarkDTS9gXdqrapT+VpBJ5zH9on0jqeCWpoE4EfslXhHMunuDnTqumKxpfCU0wQ8R7qgB5ZehQuIbYeSgVRWZaQfBnnFC//6g7t65dKmiEGl4SFQrPe7fffNfoxD3Fr9/tkP8rWNy5A8sbppGHnVrSPGMIKySy3hbeGqctGRpgEOJj1RByw6BKNICkPYr3nus++5i77PdG6/G/hCo3fLSx5zVklz9hhLgOWsfEBanDxzrO+ULczy+N6f6DqHMdfhyJEtxutQGrKCPhe+qhs3VCbkKbxXwkUuM8NINtfY5WrEb81gwkmF9NtlOpl+NrZnZhbjuxwz6HL4Hjl7/uriu5/k31I3fpL5bS0baciNzj/qtlTwJLarKNcJlCOwf+TX5BkbfpGjVq0sl31HYyiOg2c9YRKUKLnUE+CGIH+uI2k6dzXSPlOTqjw1GHwLVUOk0sxaG3xSxK1TI0v7ZB2+a+399V0cxhfjpQ32h83wiqT63keW/lsN0aZPfZgMA98inYCO2gVyyCg4dB4Oggg/PJwhIIp+a6XUpKH1DrkrHYhfKlXvqbCgBX6H4NqxfwHhR5pYnXfs2bLAtskQipK+xEWSYeuWaVkcEtwk8Fgq9XAPGN+SD6AUWS2K1A1CNKOowaayW1aBKZwiN93X9naQ9C4ZSYqXlaYsHPk26JZIIFpbWWTtJVpSfUmWueuTNQhPparLRRD/mkV8xeFPT9M8FsANUBeq/pHk40Xqyt3zTKp+8mafkLsn5mlXQMuVWKAevWqzvrao7OzwGDns1iQh7H0ZIzILr5YcNnToUAuw/Ij1nsEc5VFZj432LNahpIcVnYJ39EbI356GVpyVCOEtbvY8CF8oT3s79cvr+7ATBrA/E8xpceV41moE8gAE6SfJEyK3/Cea9TiH5gQqAvCuDKYzoNR8DyZyE91PbXPBgd/rYRKRpProbsfexyOPu9TcnQLsjpXUdsiTeWbw"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 19,
+    "candidatesTokenCount": 38,
+    "totalTokenCount": 312,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 19
+      }
+    ],
+    "thoughtsTokenCount": 255,
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-flash-preview",
+  "responseId": "AX0BatbgEqzy2roPtLuo8AE"
+}

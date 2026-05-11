@@ -27,7 +27,7 @@ class GeminiLlmService implements LlmService {
 
   static const String _apiKey = AppConfig.geminiApiKey;
 
-  static const String _model = 'gemini-1.5-flash';
+  static const String _model = 'gemini-2.5-flash';
 
   static const String _baseUrl =
       'https://generativelanguage.googleapis.com/v1beta/models';
